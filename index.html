@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15120f">
+<title>الكاتب سالم الساحلي</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="quill">✒</div>
+  <p class="eyebrow">عالم من الحروف والحكايات</p>
+  <h1>الكاتب سالم الساحلي</h1>
+  <p class="tagline">حيث تتحوّل المشاعر إلى كلمات، والحكايات إلى أثر.</p>
+  <a class="outline" href="#library">تصفّح المكتبة</a>
+</header>
+<main>
+  <section class="intro">
+    <h2>مرحباً بكم في عالمي الأدبي</h2>
+    <p>هنا تجدون القصص والكتب والخواطر والمنشورات الجديدة، مع إمكانية قراءة الملفات وتحميلها ومشاركة آرائكم.</p>
+  </section>
+  <section id="library">
+    <div class="section-heading"><div><p class="eyebrow">أحدث الإصدارات</p><h2>المكتبة والمنشورات</h2></div><span id="count" class="count">0 منشور</span></div>
+    <div id="posts" class="posts"><p class="muted">جاري تحميل المنشورات…</p></div>
+  </section>
+  <section class="admin-area">
+    <button id="adminToggle" class="text-button">إدارة الموقع</button>
+    <div id="adminPanel" class="admin-panel hidden">
+      <div id="loginBox">
+        <h3>دخول الكاتب</h3>
+        <p class="muted">لإضافة قصة أو كتاب أو منشور جديد.</p>
+        <form id="loginForm"><label>كلمة مرور الإدارة<input type="password" id="password" required autocomplete="current-password"></label><button class="primary">دخول</button></form>
+      </div>
+      <div id="publishBox" class="hidden">
+        <h3>إضافة محتوى جديد</h3>
+        <form id="postForm">
+          <label>عنوان الكتاب أو المنشور<input name="title" required maxlength="160" placeholder="مثلاً: قصتي الجديدة"></label>
+          <label>نوع المحتوى<select name="category"><option>منشور</option><option>قصة</option><option>كتاب</option><option>رواية</option><option>خواطر</option></select></label>
+          <label>النص أو الوصف<textarea name="body" rows="5" placeholder="اكتب مقدمة أو نص المنشور هنا…"></textarea></label>
+          <label>ملف مرفق (اختياري)<input type="file" name="file" accept=".pdf,.epub,.txt,.png,.jpg,.jpeg,.webp"><small>PDF أو EPUB أو TXT أو صورة، بحد أقصى 20MB.</small></label>
+          <button class="primary">نشر المحتوى</button><button type="button" id="logout" class="secondary">تسجيل الخروج</button>
+        </form>
+      </div>
+      <p id="adminMessage" role="status"></p>
+    </div>
+  </section>
+</main>
+<footer><p>© <span id="year"></span> الكاتب سالم الساحلي</p><p>صُنع بكل تقدير بواسطة <strong>سالم الساحلي</strong> ✦</p></footer>
+<script src="/app.js"></script>
+</body></html>
